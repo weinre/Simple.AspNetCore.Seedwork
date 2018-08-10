@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Authors>beefsteak</Authors>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/beefsteak/AspNetCore.WebApi.Seedwork</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/beefsteak/AspNetCore.WebApi.Seedwork</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/beefsteak/AspNetCore.WebApi.Seedwork</RepositoryUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <Copyright>https://github.com/beefsteak/AspNetCore.WebApi.Seedwork</Copyright>
+    <Description>https://github.com/beefsteak/AspNetCore.WebApi.Seedwork</Description>
   </PropertyGroup>
 
   <ItemGroup>
