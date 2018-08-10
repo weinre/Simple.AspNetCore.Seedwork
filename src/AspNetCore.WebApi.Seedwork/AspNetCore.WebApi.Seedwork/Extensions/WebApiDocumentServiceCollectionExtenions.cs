@@ -20,26 +20,6 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
 {
     public static class WebApiDocumentServiceCollectionExtenions
     {
-        public static void AddSimpleDocument(
-        this IServiceCollection services,
-        IEnumerable<(string name, string title, string description, string version)> docInfos)
-        {
-            var newDocInfos = docInfos.Select(doc => (doc.name, new Info
-            {
-                Title = doc.title,
-                Description = doc.description,
-                Version = doc.version,
-                Contact = new Contact { Name = "dbbsoft developer", Email = "development@dbbsoft.com.cn" },
-                TermsOfService = "http://www.dbbsoft.com.cn/",
-                License = new License
-                {
-                    Name = "Apache 2.0",
-                    Url = "http://www.apache.org/licenses/LICENSE-2.0.html"
-                }
-            }));
-            services.AddSimpleDocument(newDocInfos);
-        }
-
         public static void AddSimpleDocument(this IServiceCollection services, IEnumerable<(string name, Info info)> docInfos)
         {
             services.AddSwaggerGen(options =>

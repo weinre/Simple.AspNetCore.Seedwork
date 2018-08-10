@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.WebApi.Seedwork", "AspNetCore.WebApi.Seedwork\AspNetCore.WebApi.Seedwork.csproj", "{E3EDE0FD-B01E-4F8B-BA67-3C04BB23D324}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.WebApi.Seedwork.Log", "AspNetCore.WebApi.Seedwork.Log\AspNetCore.WebApi.Seedwork.Log.csproj", "{9159F94F-7FF9-4C7A-8DAC-BB42AC25F6DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.WebApi.Seedwork.Log", "AspNetCore.WebApi.Seedwork.Log\AspNetCore.WebApi.Seedwork.Log.csproj", "{9159F94F-7FF9-4C7A-8DAC-BB42AC25F6DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
