@@ -20,7 +20,7 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
 {
     public static class WebApiDocumentServiceCollectionExtenions
     {
-        public static void AddWebApiDocument(
+        public static void AddSimpleDocument(
         this IServiceCollection services,
         IEnumerable<(string name, string title, string description, string version)> docInfos)
         {
@@ -37,10 +37,10 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
                     Url = "http://www.apache.org/licenses/LICENSE-2.0.html"
                 }
             }));
-            services.AddWebApiDocument(newDocInfos);
+            services.AddSimpleDocument(newDocInfos);
         }
 
-        public static void AddWebApiDocument(this IServiceCollection services, IEnumerable<(string name, Info info)> docInfos)
+        public static void AddSimpleDocument(this IServiceCollection services, IEnumerable<(string name, Info info)> docInfos)
         {
             services.AddSwaggerGen(options =>
             {
@@ -84,7 +84,7 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
             });
         }
 
-        public static void UseWebApiDocument(this IApplicationBuilder app, string virtualDirectory = "", IEnumerable<string> names = null)
+        public static void UseSimpleDocument(this IApplicationBuilder app, string virtualDirectory = "", IEnumerable<string> names = null)
         {
             app.UseSwagger(c =>
             {

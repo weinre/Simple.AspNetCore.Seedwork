@@ -15,7 +15,7 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
 {
     public static class WebApiMvcServiceCollectionExtensions
     {
-        public static IMvcBuilder AddWebApiMvc(this IServiceCollection services)
+        public static IMvcBuilder AddSimpleMvc(this IServiceCollection services)
         {
             return services
                 .AddMvc(options => { options.Filters.Add<WebApiGlobalExceptionFilter>(); })
@@ -28,7 +28,7 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
-        public static void UseWebApiMvc(this IApplicationBuilder app, IHostingEnvironment env, bool isUseHsts = false, bool isUseHttpsRedirection = false)
+        public static void UseSimpleMvc(this IApplicationBuilder app, IHostingEnvironment env, bool isUseHsts = false, bool isUseHttpsRedirection = false)
         {
             if (env.IsDevelopment())
             {

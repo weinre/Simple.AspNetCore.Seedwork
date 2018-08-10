@@ -12,7 +12,7 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
     {
         public const string CorPolicyName = "AllowCors";
 
-        public static void AddWebApiCors(this IServiceCollection services)
+        public static void AddSimpleCors(this IServiceCollection services)
         {
             services.AddCors(options => options.AddPolicy(CorPolicyName, builder =>
             {
@@ -22,7 +22,7 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
             }));
         }
 
-        public static void UseWebApiCors(this IApplicationBuilder app)
+        public static void UseSimpleCors(this IApplicationBuilder app)
         {
             app.UseCors(CorPolicyName);
         }

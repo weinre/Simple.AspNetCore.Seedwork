@@ -10,7 +10,7 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
 {
     public static class WebApiVersionServiceCollectionExtensions
     {
-        public static void AddWebApiVersioning(this IServiceCollection services)
+        public static void AddSimpleVersioning(this IServiceCollection services)
         {
             services.AddApiVersioning(option =>
             {
