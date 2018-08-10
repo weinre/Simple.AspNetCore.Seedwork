@@ -10,6 +10,7 @@
     <PackageIconUrl></PackageIconUrl>
     <Copyright></Copyright>
     <Description>https://github.com/beefsteak/AspNetCore.WebApi.Seedwork</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
