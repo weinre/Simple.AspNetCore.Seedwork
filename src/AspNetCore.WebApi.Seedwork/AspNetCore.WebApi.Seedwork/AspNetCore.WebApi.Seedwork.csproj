@@ -8,7 +8,7 @@
     <PackageLicenseUrl>https://raw.githubusercontent.com/beefsteak/AspNetCore.WebApi.Seedwork/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/beefsteak/AspNetCore.WebApi.Seedwork</RepositoryUrl>
     <PackageIconUrl></PackageIconUrl>
-    <Copyright>https://github.com/beefsteak/AspNetCore.WebApi.Seedwork</Copyright>
+    <Copyright></Copyright>
     <Description>https://github.com/beefsteak/AspNetCore.WebApi.Seedwork</Description>
   </PropertyGroup>
 
