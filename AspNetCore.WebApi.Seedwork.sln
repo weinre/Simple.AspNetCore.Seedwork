@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE = LICENSE
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3A64A240-696A-46A3-B4F3-A0866B0C8CF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.WebApi.Seedwork.SimpleDocumentTest", "test\AspNetCore.WebApi.Seedwork.SimpleDocumentTest\AspNetCore.WebApi.Seedwork.SimpleDocumentTest.csproj", "{A4EA3A9D-0BFE-4473-899A-168A6F625A59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +34,10 @@ Global
 		{1BA3CB95-2D27-4B6C-A97B-AE4C602C3A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BA3CB95-2D27-4B6C-A97B-AE4C602C3A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BA3CB95-2D27-4B6C-A97B-AE4C602C3A95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4EA3A9D-0BFE-4473-899A-168A6F625A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4EA3A9D-0BFE-4473-899A-168A6F625A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4EA3A9D-0BFE-4473-899A-168A6F625A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4EA3A9D-0BFE-4473-899A-168A6F625A59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D7FAAE27-11AA-4D3E-851A-B7D3E6F2A9AC} = {91F2999F-8B87-4ED5-8D89-B38F7AB007E6}
 		{1BA3CB95-2D27-4B6C-A97B-AE4C602C3A95} = {91F2999F-8B87-4ED5-8D89-B38F7AB007E6}
+		{A4EA3A9D-0BFE-4473-899A-168A6F625A59} = {3A64A240-696A-46A3-B4F3-A0866B0C8CF7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B05135D-4A8C-4ECD-A2E7-7A40AA5AB24B}
