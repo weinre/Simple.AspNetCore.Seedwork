@@ -31,24 +31,27 @@ namespace AspNetCore.WebApi.Seedwork.Extensions
                     options.SwaggerDoc(docInfo.name, docInfo.info);
                 }
 
-                //options.DocInclusionPredicate((docName, apiDesc) =>
-                //{
-                //    if (!apiDesc.TryGetMethodInfo(out MethodInfo methodInfo))
-                //        return false;
-
-                //    var versions = methodInfo.DeclaringType
-                //        .GetCustomAttributes(true)
-                //        .OfType<ApiVersionAttribute>()
-                //        .SelectMany(attr => attr.Versions)
-                //        .ToList();
-
-                //    return versions.Any(v => $"v{v.ToString()}" == docName);
-                //});
-
                 var filePath = Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, $"{Assembly.GetEntryAssembly().EntryPoint.DeclaringType.Namespace}.xml");
                 options.IncludeXmlComments(filePath);
 
-                options.OperationFilter<AddAutoVersionHeaderParamterOperationFilter>();
+                if (docInfos.Count() > 1)
+                {
+                    options.DocInclusionPredicate((docName, apiDesc) =>
+                    {
+                        if (!apiDesc.TryGetMethodInfo(out MethodInfo methodInfo))
+                            return false;
+
+                        var versions = methodInfo.DeclaringType
+                            .GetCustomAttributes(true)
+                            .OfType<ApiVersionAttribute>()
+                            .SelectMany(attr => attr.Versions)
+                            .ToList();
+
+                        return versions.Any(v => $"v{v.ToString()}" == docName);
+                    });
+                    options.OperationFilter<AddAutoVersionHeaderParamterOperationFilter>();
+                }
+
                 options.OperationFilter<AddActionAuthorizeDescriptionOperationFilter>();
                 //options.OperationFilter<AddAuthTokenHeaderParameterOperationFilter>();
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
