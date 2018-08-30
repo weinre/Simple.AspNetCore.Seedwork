@@ -6,7 +6,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspNetCore.WebApi.Seedwork.Extensions
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class WebApiCorsServiceCollectionExtensions
     {

@@ -16,7 +16,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace AspNetCore.WebApi.Seedwork.Extensions
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class WebApiDocumentServiceCollectionExtenions
     {

@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace AspNetCore.WebApi.Seedwork.Extensions
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class WebApiMvcServiceCollectionExtensions
     {

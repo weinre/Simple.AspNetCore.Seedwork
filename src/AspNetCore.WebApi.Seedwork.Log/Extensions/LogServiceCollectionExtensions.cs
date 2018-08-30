@@ -6,13 +6,12 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using NLog.Extensions.Logging;
 using NLog.Web;
 
-namespace AspNetCore.WebApi.Seedwork.Extensions
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class LogServiceCollectionExtensions
     {
