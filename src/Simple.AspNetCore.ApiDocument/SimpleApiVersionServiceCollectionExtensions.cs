@@ -4,13 +4,12 @@
  * ***********************************************/
 
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class WebApiVersionServiceCollectionExtensions
+    public static class SimpleApiVersionServiceCollectionExtensions
     {
-        public static void AddSimpleVersioning(this IServiceCollection services)
+        public static void AddSimpleApiVersion(this IServiceCollection services)
         {
             services.AddApiVersioning(option =>
             {

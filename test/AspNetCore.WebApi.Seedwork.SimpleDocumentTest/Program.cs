@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace AspNetCore.WebApi.Seedwork.SimpleDocumentTest
+namespace Simple.AspNetCore.Seedwork.Test
 {
     public class Program
     {

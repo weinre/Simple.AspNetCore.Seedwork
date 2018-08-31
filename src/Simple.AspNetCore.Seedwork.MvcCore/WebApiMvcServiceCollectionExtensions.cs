@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace Simple.AspNetCore.Seedwork.MvcCore
 {
     public static class WebApiMvcServiceCollectionExtensions
     {
@@ -28,7 +28,11 @@ namespace Microsoft.Extensions.DependencyInjection
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
-        public static void UseSimpleMvc(this IApplicationBuilder app, IHostingEnvironment env, bool isUseHsts = false, bool isUseHttpsRedirection = false)
+        public static void UseSimpleMvc(
+            this IApplicationBuilder app, 
+            IHostingEnvironment env, 
+            bool isUseHsts = false,
+            bool isUseHttpsRedirection = false)
         {
             if (env.IsDevelopment())
             {

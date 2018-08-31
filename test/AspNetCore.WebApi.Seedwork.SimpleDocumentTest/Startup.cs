@@ -3,10 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Swagger;
 using System.Collections.Generic;
 
-namespace AspNetCore.WebApi.Seedwork.SimpleDocumentTest
+namespace Simple.AspNetCore.Seedwork.Test
 {
     public class Startup
     {
@@ -20,17 +19,21 @@ namespace AspNetCore.WebApi.Seedwork.SimpleDocumentTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSimpleDocument(new List<(string name, Info info)>
+            services.AddSimpleApiDocument(options =>
             {
-                ("v1.0", new Info
+                options.Docs = new List<(string name, Info info)>
                 {
-                    Title = "标题",
-                    Description = "描述",
-                    Version = "v1.0"
-                })
+                    ("v1.0", new Info
+                    {
+                        Title = "标题",
+                        Description = "描述",
+                        Version = "v1.0"
+                    })
+                };
+                options.IsSupportApiVersion = true;
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddSimpleVersioning();
+            services.AddSimpleApiVersion();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,7 +43,7 @@ namespace AspNetCore.WebApi.Seedwork.SimpleDocumentTest
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseSimpleDocument(string.Empty, new List<string> { "v1.0" });
+            app.UseSimpleApiDocument();
             app.UseMvc();
         }
     }

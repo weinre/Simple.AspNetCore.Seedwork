@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCore.WebApi.Seedwork.SimpleDocumentTest.Controllers
+namespace Simple.AspNetCore.Seedwork.Test.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

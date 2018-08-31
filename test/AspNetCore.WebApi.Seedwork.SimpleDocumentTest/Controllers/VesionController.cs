@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCore.WebApi.Seedwork.SimpleDocumentTest.Controllers
+namespace Simple.AspNetCore.Seedwork.Test.Controllers
 {
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]

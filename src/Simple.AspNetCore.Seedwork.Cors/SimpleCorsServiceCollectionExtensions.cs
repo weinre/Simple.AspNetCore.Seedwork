@@ -4,11 +4,10 @@
  * ***********************************************/
 
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class WebApiCorsServiceCollectionExtensions
+    public static class SimpleCorsServiceCollectionExtensions
     {
         public const string CorPolicyName = "AllowCors";
 
