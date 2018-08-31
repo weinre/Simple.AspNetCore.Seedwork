@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Simple.AspNetCore.Seedwork.Test
 {
