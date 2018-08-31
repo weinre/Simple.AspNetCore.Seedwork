@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Simple.AspNetCore.Seedwork.Test.Controllers
 {
+    /// <summary>
+    /// Test
+    /// </summary>
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]

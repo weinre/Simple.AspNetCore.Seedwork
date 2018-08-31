@@ -35,7 +35,7 @@ namespace Microsoft.Extensions.DependencyInjection
                     options.SwaggerDoc(name, info);
                 }
                 var xmlCommentsFilePath = Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, $"{Assembly.GetEntryAssembly().EntryPoint.DeclaringType.Namespace}.xml");
-                options.IncludeXmlComments(xmlCommentsFilePath);
+                options.IncludeXmlComments(xmlCommentsFilePath, true);
                 options.OperationFilter<AddActionAuthorizeDescriptionOperationFilter>();
                 options.OperationFilter<Remove200StatusCodeResponseDescriptionIfNotNeedOperationFilter>();
                 if (simpleApiDocumentOptions.IsSupportApiVersion)

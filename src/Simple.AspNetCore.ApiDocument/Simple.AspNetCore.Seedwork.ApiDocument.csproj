@@ -10,6 +10,7 @@
     <PackageLicenseUrl>https://raw.githubusercontent.com/beefsteak/Simple.AspNetCore.Seedwork/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/beefsteak/Simple.AspNetCore.Seedwork</PackageProjectUrl>
     <RepositoryUrl>https://github.com/beefsteak/Simple.AspNetCore.Seedwork</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
