@@ -3,16 +3,15 @@
  * email:   beefsteak@live.cn  
  * ***********************************************/
 
-using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using NLog.Extensions.Logging;
 using NLog.Web;
+using System.IO;
 
-namespace Simple.AspNetCore.Seedwork.Log
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class SimpleLogServiceCollectionExtensions
     {
