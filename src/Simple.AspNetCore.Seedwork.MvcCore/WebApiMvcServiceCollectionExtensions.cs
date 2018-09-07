@@ -3,10 +3,11 @@
  * email:   beefsteak@live.cn  
  * ***********************************************/
 
-using AspNetCore.WebApi.Seedwork.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Simple.AspNetCore.Seedwork.MvcCore;
+using System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -14,28 +15,36 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IMvcBuilder AddSimpleMvc(this IServiceCollection services)
         {
+            return services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+        }
+
+        public static IMvcBuilder AddSimpleMvc(this IServiceCollection services, Action<MvcOptions> setupAction)
+        {
             return services
-                .AddMvc(options => { options.Filters.Add<WebApiGlobalExceptionFilter>(); })
+                .AddMvc(setupAction)
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
-        public static void UseSimpleMvc(
+        public static void UseSimpleConfig(
             this IApplicationBuilder app,
             IHostingEnvironment env,
-            bool isUseHsts = false,
-            bool isUseHttpsRedirection = false)
+            Action<SimpleConfigOptions> configOptions = null)
         {
-            if (env.IsDevelopment())
+            var simpleConfigOptions = new SimpleConfigOptions();
+            configOptions?.Invoke(simpleConfigOptions);
+            if (simpleConfigOptions.IsSupportDeveloperExceptionPage && env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
+            if (simpleConfigOptions.IsSupportHttps)
             {
-                if (isUseHsts)
-                    app.UseHsts();
-            }
-            if (isUseHttpsRedirection)
+                app.UseHsts();
                 app.UseHttpsRedirection();
+            }
+        }
+
+        public static void UseSimpleMvc(this IApplicationBuilder app)
+        {
             app.UseMvc();
         }
     }

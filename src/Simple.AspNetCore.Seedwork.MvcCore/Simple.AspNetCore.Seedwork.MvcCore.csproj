@@ -10,7 +10,7 @@
     <PackageIconUrl></PackageIconUrl>
     <Copyright></Copyright>
     <Description>https://github.com/beefsteak/Simple.AspNetCore.Seedwork</Description>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

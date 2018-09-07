@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
+using AspNetCore.WebApi.Seedwork.Filters;
+using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Simple.AspNetCore.Seedwork.Test
@@ -20,6 +22,7 @@ namespace Simple.AspNetCore.Seedwork.Test
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSimpleNLog(Configuration);
             services.AddSimpleApiDocument(options =>
             {
                 options.Docs = new List<(string name, Info info)>
@@ -33,19 +36,19 @@ namespace Simple.AspNetCore.Seedwork.Test
                 };
                 options.IsSupportApiVersion = true;
             });
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSimpleMvc(options => options.Filters.Add<WebApiGlobalExceptionFilter>());
             services.AddSimpleApiVersion();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(
+            IApplicationBuilder app, 
+            IHostingEnvironment env,
+            ILoggerFactory loggerFactory)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            loggerFactory.UseSimpleNLog(env);
             app.UseSimpleApiDocument();
-            app.UseMvc();
+            app.UseSimpleMvc();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Simple.AspNetCore.Seedwork.Test.Controllers
@@ -11,6 +12,12 @@ namespace Simple.AspNetCore.Seedwork.Test.Controllers
     [ApiController]
     public class VesionController : ControllerBase
     {
+        [HttpGet("exceptiontest")]
+        public IActionResult Exception()
+        {
+            throw new ArgumentException("have a bug");
+        }
+
         // GET api/vesion
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
