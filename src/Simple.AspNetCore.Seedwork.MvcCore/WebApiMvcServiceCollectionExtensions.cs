@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Simple.AspNetCore.Seedwork.MvcCore;
 using System;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -36,6 +38,29 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            if (simpleConfigOptions.IsSupportExceptionHandlerWithoutDeveloper && !env.IsDevelopment())
+            {
+                app.UseExceptionHandler(builder =>
+                {
+                    builder.Run(async context =>
+                    {
+                        context.Response.StatusCode = 500;
+                        var ex = context.Features.Get<IExceptionHandlerFeature>();
+                        if (ex != null)
+                        {
+                            var errorMsg = $"<h1>Error:{ex.Error.Message}</h1> {ex.Error.StackTrace}";
+                            await context.Response.WriteAsync(errorMsg);
+                        }
+                        else
+                        {
+                            await context.Response.WriteAsync("Internal Server Error.");
+                        }
+
+                    });
+                });
+            }
+
             if (simpleConfigOptions.IsSupportHttps)
             {
                 app.UseHsts();

@@ -9,6 +9,8 @@ namespace Simple.AspNetCore.Seedwork.MvcCore
     {
         public bool IsSupportDeveloperExceptionPage { set; get; } = false;
 
+        public bool IsSupportExceptionHandlerWithoutDeveloper { set; get; } = true;
+
         public bool IsSupportHttps { set; get; } = false;
     }
 }

@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using AspNetCore.WebApi.Seedwork.Filters;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Collections.Generic;
-using AspNetCore.WebApi.Seedwork.Filters;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
 
 namespace Simple.AspNetCore.Seedwork.Test
 {
@@ -42,11 +43,12 @@ namespace Simple.AspNetCore.Seedwork.Test
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(
-            IApplicationBuilder app, 
+            IApplicationBuilder app,
             IHostingEnvironment env,
             ILoggerFactory loggerFactory)
         {
             loggerFactory.UseSimpleNLog(env);
+            app.UseSimpleConfig(env);
             app.UseSimpleApiDocument();
             app.UseSimpleMvc();
         }
