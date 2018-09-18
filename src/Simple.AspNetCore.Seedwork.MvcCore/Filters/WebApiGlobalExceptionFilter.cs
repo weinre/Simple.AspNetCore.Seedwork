@@ -24,7 +24,7 @@ namespace AspNetCore.WebApi.Seedwork.Filters
             var logger = _loggerFactory.CreateLogger(context.Exception.TargetSite.ReflectedType);
             logger.LogError(new EventId(context.Exception.HResult),
                 context.Exception,
-                nameof(WebApiGlobalExceptionFilter));
+                context.Exception != null ? context.Exception.StackTrace : nameof(WebApiGlobalExceptionFilter));
             context.HttpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             context.Result = new ObjectResult(context.Exception.Message);
             context.ExceptionHandled = true;
