@@ -12,6 +12,8 @@ namespace Simple.AspNetCore.Seedwork.ApiDocument
     {
         public IEnumerable<(string name, Info info)> Docs { set; get; }
 
+        public string IncludeXmlCommentsFilePath { set; get; }
+
         public bool IsSupportApiVersion { set; get; }
 
         public bool IsSupportJWTToken { set; get; }

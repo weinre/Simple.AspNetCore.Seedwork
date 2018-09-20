@@ -5,14 +5,12 @@
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.PlatformAbstractions;
 using Simple.AspNetCore.Seedwork.ApiDocument;
 using Simple.AspNetCore.Seedwork.ApiDocument.OperationFilters;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 
@@ -34,8 +32,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 {
                     options.SwaggerDoc(name, info);
                 }
-                var xmlCommentsFilePath = Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, $"{Assembly.GetEntryAssembly().EntryPoint.DeclaringType.Namespace}.xml");
-                options.IncludeXmlComments(xmlCommentsFilePath, true);
+                if (!string.IsNullOrWhiteSpace(simpleApiDocumentOptions.IncludeXmlCommentsFilePath))
+                    options.IncludeXmlComments(simpleApiDocumentOptions.IncludeXmlCommentsFilePath, true);
                 options.OperationFilter<AddActionAuthorizeDescriptionOperationFilter>();
                 options.OperationFilter<Add400StatusCodeResponseDescriptionIfNeedOperationFilter>();
                 options.OperationFilter<Remove200StatusCodeResponseDescriptionIfNotNeedOperationFilter>();

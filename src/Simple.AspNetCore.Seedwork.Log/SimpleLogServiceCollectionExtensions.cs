@@ -6,7 +6,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.PlatformAbstractions;
 using NLog.Extensions.Logging;
 using NLog.Web;
 using System.IO;
@@ -26,11 +25,7 @@ namespace Microsoft.Extensions.DependencyInjection
         public static void UseSimpleNLog(this ILoggerFactory loggerFactory, IHostingEnvironment env, string defaultLogConfigFileName = "nlog.config")
         {
             loggerFactory.AddNLog();
-            var contentRootPath = env.ContentRootPath;
-            var applicationBasePath = PlatformServices.Default.Application.ApplicationBasePath;
-            var logFileName = Path.Combine(applicationBasePath.Replace(contentRootPath, ""), defaultLogConfigFileName);
-            logFileName = logFileName.IndexOf('\\') >= 0 ? logFileName.Substring(1, logFileName.Length - 1) : logFileName;
-            env.ConfigureNLog(logFileName);
+            env.ConfigureNLog(defaultLogConfigFileName);
         }
     }
 }
