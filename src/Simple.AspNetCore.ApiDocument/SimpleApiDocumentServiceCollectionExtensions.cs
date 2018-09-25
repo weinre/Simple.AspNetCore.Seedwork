@@ -35,8 +35,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 if (!string.IsNullOrWhiteSpace(simpleApiDocumentOptions.IncludeXmlCommentsFilePath))
                     options.IncludeXmlComments(simpleApiDocumentOptions.IncludeXmlCommentsFilePath, true);
                 options.OperationFilter<AddActionAuthorizeDescriptionOperationFilter>();
-                options.OperationFilter<Add400StatusCodeResponseDescriptionIfNeedOperationFilter>();
-                options.OperationFilter<Remove200StatusCodeResponseDescriptionIfNotNeedOperationFilter>();
+                options.OperationFilter<AddBadRequestResponseDescriptionIfNeedOperationFilter>();
+                options.OperationFilter<RemoveOkResponseDescriptionIfNotNeedOperationFilter>();
                 if (simpleApiDocumentOptions.IsSupportApiVersion)
                 {
                     options.DocInclusionPredicate((docName, apiDesc) =>
