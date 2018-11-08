@@ -23,7 +23,7 @@ namespace Simple.AspNetCore.Seedwork.Test
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSimpleNLog(Configuration);
+            //services.AddSimpleNLog(Configuration);
             services.AddSimpleApiDocument(options =>
             {
                 options.Docs = new List<(string name, Info info)>
@@ -47,7 +47,7 @@ namespace Simple.AspNetCore.Seedwork.Test
             IHostingEnvironment env,
             ILoggerFactory loggerFactory)
         {
-            loggerFactory.UseSimpleNLog(env);
+            //loggerFactory.UseSimpleNLog(env);
             app.UseSimpleConfig(env);
             app.UseSimpleApiDocument();
             app.UseSimpleMvc();
