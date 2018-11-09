@@ -3,23 +3,15 @@
  * email:   beefsteak@live.cn  
  * ***********************************************/
 
-using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Options;
+using Simple.AspNetCore.Seedwork.MvcCore.Config;
+using System;
 
 namespace Simple.AspNetCore.Seedwork.MvcCore.StartupFilters
 {
-    public class VirtualPathOptions : IOptions<VirtualPathOptions>
-    {
-        public string BasePath { set; get; }
-
-        public bool IsUseEnvironmentVariable { set; get; }
-
-        public VirtualPathOptions Value { get; }
-    }
-
-    public class VirtualPathStartupFilter : IStartupFilter
+    public sealed class VirtualPathStartupFilter : IStartupFilter
     {
         public const string DefaultEnvironmentVariableValue = "ASPNETCORE_BASEPATH";
         private readonly VirtualPathOptions _options;
@@ -43,8 +35,8 @@ namespace Simple.AspNetCore.Seedwork.MvcCore.StartupFilters
                         context.Request.PathBase = basePath;
                         await next2.Invoke();
                     });
-                    next(app);
                 }
+                next(app);
             };
         }
     }
