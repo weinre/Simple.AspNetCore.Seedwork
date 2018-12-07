@@ -17,14 +17,14 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IMvcBuilder AddSimpleMvc(this IServiceCollection services)
         {
-            return services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            return services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         public static IMvcBuilder AddSimpleMvc(this IServiceCollection services, Action<MvcOptions> setupAction)
         {
             return services
                 .AddMvc(setupAction)
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         public static void UseSimpleConfig(
