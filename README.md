@@ -2,8 +2,11 @@
 WebApi mini framework for aspnetcore
 
 # Simple.AspNetCore.Seedwork.Cors
+```c#
+
 services.AddSimpleCors();
 app.UseSimpleCors();
+```
 
 # Simple.AspNetCore.Seedwork.ApiDocument
   services.AddSimpleApiDocument(options =>
