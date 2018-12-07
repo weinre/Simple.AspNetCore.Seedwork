@@ -36,13 +36,13 @@ app.UseSimpleApiDocument();
 
 services.AddVirtualPath();
 services
-                .AddSimpleMvc(options => { options.Filters.Add<WebApiGlobalExceptionFilter>(); })
-                .AddJsonOptions(options =>
-                {
-                    options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-                    options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
-                })
-                .AddFluentValidationOptions();
+    .AddSimpleMvc(options => { options.Filters.Add<WebApiGlobalExceptionFilter>(); })
+    .AddJsonOptions(options =>
+    {
+        options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+        options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+    })
+    .AddFluentValidationOptions();
 app.UseSimpleConfig(env);
 app.UseSimpleMvc();
 ```
