@@ -37,6 +37,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 options.OperationFilter<AddActionAuthorizeDescriptionOperationFilter>();
                 options.OperationFilter<AddBadRequestResponseDescriptionIfNeedOperationFilter>();
                 options.OperationFilter<RemoveOkResponseDescriptionIfNotNeedOperationFilter>();
+                if (simpleApiDocumentOptions.Resolver != null)
+                    options.ResolveConflictingActions(simpleApiDocumentOptions.Resolver);
                 if (simpleApiDocumentOptions.IsSupportApiVersion)
                 {
                     options.DocInclusionPredicate((docName, apiDesc) =>
