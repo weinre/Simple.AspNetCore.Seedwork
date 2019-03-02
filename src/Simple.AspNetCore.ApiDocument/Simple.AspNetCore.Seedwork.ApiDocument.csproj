@@ -11,6 +11,7 @@
     <PackageProjectUrl>https://github.com/beefsteak/Simple.AspNetCore.Seedwork</PackageProjectUrl>
     <RepositoryUrl>D:\github\Simple.AspNetCore.DFS\src\Simple.AspNetCore.DFS\bin\Release</RepositoryUrl>
     <Version>1.0.8</Version>
+    <PackageIconUrl>https://raw.githubusercontent.com/beefsteak/Simple.AspNetCore.Seedwork/master/orange.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
