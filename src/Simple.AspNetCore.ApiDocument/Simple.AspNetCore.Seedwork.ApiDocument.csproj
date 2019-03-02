@@ -9,12 +9,12 @@
     <Description>https://github.com/beefsteak/Simple.AspNetCore.Seedwork</Description>
     <PackageLicenseUrl>https://raw.githubusercontent.com/beefsteak/Simple.AspNetCore.Seedwork/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/beefsteak/Simple.AspNetCore.Seedwork</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/beefsteak/Simple.AspNetCore.Seedwork</RepositoryUrl>
-    <Version>1.0.7</Version>
+    <RepositoryUrl>D:\github\Simple.AspNetCore.DFS\src\Simple.AspNetCore.DFS\bin\Release</RepositoryUrl>
+    <Version>1.0.8</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="4.0.1" />
