@@ -8,7 +8,7 @@
     <Version>1.0.9</Version>
     <PackageProjectUrl>https://github.com/beefsteak/Simple.AspNetCore.Seedwork</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/beefsteak/Simple.AspNetCore.Seedwork/master/orange.png</PackageIconUrl>
-    <PackageLicenseExpression>https://raw.githubusercontent.com/beefsteak/Simple.AspNetCore.Seedwork/master/LICENSE</PackageLicenseExpression>
+    <PackageLicenseExpression></PackageLicenseExpression>
     <Company>orange</Company>
     <Authors>beefsteak</Authors>
     <Description>https://github.com/beefsteak/Simple.AspNetCore.Seedwork</Description>
