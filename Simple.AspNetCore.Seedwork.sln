@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2047
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{91F2999F-8B87-4ED5-8D89-B38F7AB007E6}"
 EndProject
@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3A64A240-6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.AspNetCore.Seedwork.Test", "test\AspNetCore.WebApi.Seedwork.SimpleDocumentTest\Simple.AspNetCore.Seedwork.Test.csproj", "{A4EA3A9D-0BFE-4473-899A-168A6F625A59}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.AspNetCore.Seedwork.ApiDocument", "src\Simple.AspNetCore.ApiDocument\Simple.AspNetCore.Seedwork.ApiDocument.csproj", "{1760B8A2-98F9-4189-B800-68D77FC41B3E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.AspNetCore.Seedwork.Cors", "src\Simple.AspNetCore.Seedwork.Cors\Simple.AspNetCore.Seedwork.Cors.csproj", "{1F9430E8-B900-4A53-8B35-E054CFC0D12B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.AspNetCore.Seedwork.MvcCore", "src\Simple.AspNetCore.Seedwork.MvcCore\Simple.AspNetCore.Seedwork.MvcCore.csproj", "{6A5B1F69-28CB-4B63-9833-FAD32B91FD1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.AspNetCore.Seedwork.ApiDocument", "src\Simple.AspNetCore.Seedwork.ApiDocument\Simple.AspNetCore.Seedwork.ApiDocument.csproj", "{D1260D41-331F-43A0-AC1F-A5D5C9B5495F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{A4EA3A9D-0BFE-4473-899A-168A6F625A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4EA3A9D-0BFE-4473-899A-168A6F625A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4EA3A9D-0BFE-4473-899A-168A6F625A59}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1760B8A2-98F9-4189-B800-68D77FC41B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1760B8A2-98F9-4189-B800-68D77FC41B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1760B8A2-98F9-4189-B800-68D77FC41B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1760B8A2-98F9-4189-B800-68D77FC41B3E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1F9430E8-B900-4A53-8B35-E054CFC0D12B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F9430E8-B900-4A53-8B35-E054CFC0D12B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F9430E8-B900-4A53-8B35-E054CFC0D12B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,15 +41,19 @@ Global
 		{6A5B1F69-28CB-4B63-9833-FAD32B91FD1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A5B1F69-28CB-4B63-9833-FAD32B91FD1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A5B1F69-28CB-4B63-9833-FAD32B91FD1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1260D41-331F-43A0-AC1F-A5D5C9B5495F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1260D41-331F-43A0-AC1F-A5D5C9B5495F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1260D41-331F-43A0-AC1F-A5D5C9B5495F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1260D41-331F-43A0-AC1F-A5D5C9B5495F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A4EA3A9D-0BFE-4473-899A-168A6F625A59} = {3A64A240-696A-46A3-B4F3-A0866B0C8CF7}
-		{1760B8A2-98F9-4189-B800-68D77FC41B3E} = {91F2999F-8B87-4ED5-8D89-B38F7AB007E6}
 		{1F9430E8-B900-4A53-8B35-E054CFC0D12B} = {91F2999F-8B87-4ED5-8D89-B38F7AB007E6}
 		{6A5B1F69-28CB-4B63-9833-FAD32B91FD1C} = {91F2999F-8B87-4ED5-8D89-B38F7AB007E6}
+		{D1260D41-331F-43A0-AC1F-A5D5C9B5495F} = {91F2999F-8B87-4ED5-8D89-B38F7AB007E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B05135D-4A8C-4ECD-A2E7-7A40AA5AB24B}

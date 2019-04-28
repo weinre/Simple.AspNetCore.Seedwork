@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Simple.AspNetCore.ApiDocument\Simple.AspNetCore.Seedwork.ApiDocument.csproj" />
+    <ProjectReference Include="..\..\src\Simple.AspNetCore.Seedwork.ApiDocument\Simple.AspNetCore.Seedwork.ApiDocument.csproj" />
     <ProjectReference Include="..\..\src\Simple.AspNetCore.Seedwork.MvcCore\Simple.AspNetCore.Seedwork.MvcCore.csproj" />
   </ItemGroup>
 
